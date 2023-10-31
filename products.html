@@ -1,0 +1,138 @@
+ <html>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<title>
+			All products -Prac9
+		</title>
+		
+		<link rel="icon" href="logo.png">
+		<link rel="stylesheet" href="Prac9.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+	</head>
+	
+	<body>
+		<div class="container">
+			<div class="navbar">
+				<div class="logo">
+					<img src="logo.png" alt="Logo" width="125px">
+				</div>
+				
+				<nav>
+					<ul id="menuitems">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="products.html">Products</a></li>
+						<li><a href="">About</a></li>
+						<li><a href="">Contact</a></li>
+						<li><a href="account.html"><img src="user.png"></a></li>
+						<li><a href="cart.html"><img src="cart.png" width="30px height="30px"></a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		
+		<div class="small-container">
+			<div class="row row-2">
+				<h2>All Products</h2>
+				<div ng-app="myApp" ng-controller="myCtrl">
+
+					<select>
+					<option ng-repeat="x in names">{{x}}</option>
+					</select>
+					
+					</div>
+					
+					<script>
+					var app = angular.module('myApp', []);
+					app.controller('myCtrl', function($scope) {
+						$scope.names = ["Default Sorting", "Sort by price", "Sort by popularity","Sort by rating","Sort by sale"];
+					});
+					</script>
+			</div>
+			
+			<div class="row">
+				<div class="col-4">
+					<a href="productdetails.html">
+						<img src="product-1.jpg">
+					</a>
+					<h4>Xiaomi Redmi Note 8</h4>
+					<p>&#8377; 12,899.00</p>
+					<form name="Cart" id="Cart">
+						<input type="submit" id="" value="Add To Cart" class="Add">
+					</form>
+				</div>
+				
+				<div class="col-4">
+					<img src="product-2.jpg">
+					<h4>OnePlus 8T</h4>
+					<p>&#8377; 41,999.00</p>
+					<form name="Cart" id="Cart">
+						<input type="submit" id="" value="Add To Cart" class="Add">
+					</form>
+				</div>
+				
+				<div class="col-4">
+					<img src="product-3.jpeg">
+					<h4>Samsung M20</h4>
+					<p>&#8377; 22,399.00</p>
+					<form name="Cart" id="Cart">
+						<input type="submit" id="" value="Add To Cart" class="Add">
+					</form>
+				</div>
+				
+				<div class="col-4">
+					<img src="product-4.jpg">
+					<h4>Vivo X50</h4>
+					<p>&#8377; 28,599.00</p>
+					<form name="Cart" id="Cart">
+						<input type="submit" id="" value="Add To Cart" class="Add">
+					</form>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-4">
+					<img src="product-5.jpg">
+					<h4>Headphones</h4>
+				</div>
+				
+				<div class="col-4">
+					<img src="product-6.jpg">
+					<h4>Mobile Cover</h4>
+				</div>
+				
+				<div class="col-4">
+					<img src="product-7.png">
+					<h4>Tablet</h4>
+				</div>
+				
+				<div class="col-4">
+					<img src="product-8.jpg">
+					<h4>Watches</h4>
+				</div>
+			</div>
+		</div>
+		
+		<div class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="footer-col-1">
+						<h3>Download our app</h3>
+						<p>Download App from android and ios mobile phone.</p>
+						
+						<div class="app-logo">
+							<img src="play-store.png">
+							<img src="app-store.png">
+						</div>
+					</div>
+				</div>
+				<hr>
+				<p class="copyright">Copyright 2021-Thugle</p>
+			</div>
+		</div>
+		
+	</body>
+</html>

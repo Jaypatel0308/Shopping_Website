@@ -1,0 +1,167 @@
+ <html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<title>
+			Product Details -Prac9
+		</title>
+		
+		<link rel="icon" href="logo.png">
+		<link rel="stylesheet" href="Prac9.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+	</head>
+	
+	<body>
+		<div class="container">
+			<div class="navbar">
+				<div class="logo">
+					<img src="logo.png" alt="Logo" width="125px">
+				</div>
+				
+				<nav>
+					<ul id="menuitems">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="products.html">Products</a></li>
+						<li><a href="">About</a></li>
+						<li><a href="">Contact</a></li>
+						<li><a href="account.html"><img src="user.png"></a></li>
+						<li><a href="cart.html"><img src="cart.png" width="30px height="30px"></a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		
+		<div class="small-container single-product">
+			<div class="row">
+				<div class="col">
+					<img src="product-1.jpg" width="100%" id="productimg">
+					<div class="small-img-row">
+						<div class="small-img-col">
+							<img src="gallery-1.jpg" width="100%" class="small-img">
+						</div>
+						
+						<div class="small-img-col">
+							<img src="gallery-2.jpg" width="100%" class="small-img">
+						</div>
+						
+						<div class="small-img-col">
+							<img src="gallery-3.jpg" width="100%" class="small-img">
+						</div>
+						
+						<div class="small-img-col">
+							<img src="gallery-4.jpg" width="100%" class="small-img">
+						</div>
+					</div>
+				</div>
+				
+				<div class="col">
+					<p>Home / Mobile</p>
+					<h1>Xiaomi Redmi Note 8</h1>
+					<h4>&#8377; 12,899.00</h4>
+					<select>
+						<option>Select Color</option>
+						<option>Blue</option>
+						<option>Black</option> 
+						<option>Red</option>
+					</select>
+						<input type="number" value="0" id="num" min="0" style="margin: 10px 0;">	<br>
+						<a href="cart.html"><button type="submit" class="btn" onclick="return Value()" style="width: 180px;">Add To Cart</button></a>
+					<h3>Product details</h3>
+					<br>
+					<p>	16 cm (6.3 inch) FHD+ 2340 x 1080 Display<br>
+						48 MP, 8 MP, 2 MP, 2 MP Primary Camera<br>
+						13MP Selfie Camera, Dual Corning Gorilla Glass 5<br>
+						Qualcomm Snapdragon 665 Processor</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="small-container">
+			<div class="row row-2">
+				<h2>Related Products</h2>
+				<p>View More</p>
+			</div>
+		</div>
+		
+		<div class="small-container">
+			<div class="row">
+				<div class="col-4">
+					<img src="product-1.jpg">
+					<h4>Xiaomi Redmi Note 8</h4>
+					<p>&#8377; 12,899.00</p>
+					<form name="Cart" id="Cart">
+						<input type="submit" id="" value="Add To Cart" class="Add">
+					</form>
+				</div>
+				
+				<div class="col-4">
+					<img src="product-2.jpg">
+					<h4>OnePlus 8T</h4>
+					<p>&#8377; 41,999.00</p>
+					<form name="Cart" id="Cart">
+						<input type="submit" id="" value="Add To Cart" class="Add">
+					</form>
+				</div>
+				
+				<div class="col-4">
+					<img src="product-3.jpeg">
+					<h4>Samsung M20</h4>
+					<p>&#8377; 22,399.00</p>
+					<form name="Cart" id="Cart">
+						<input type="submit" id="" value="Add To Cart" class="Add">
+					</form>
+				</div>
+				
+				<div class="col-4">
+					<img src="product-4.jpg">
+					<h4>Vivo X50</h4>
+					<p>&#8377; 28,599.00</p>
+					<form name="Cart" id="Cart">
+						<input type="submit" id="" value="Add To Cart" class="Add">
+					</form>
+				</div>
+			</div>
+		</div>
+		
+		<div class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="footer-col-1">
+						<h3>Download our app</h3>
+						<p>Download App from android and ios mobile phone.</p>
+						<div class="app-logo">
+							<img src="play-store.png">
+							<img src="app-store.png">
+						</div>
+					</div>
+				</div>
+				<hr>
+				<p class="copyright">Copyright 2021-Thugle</p>
+			</div>
+		</div>
+		
+		<script>
+			var productimg=document.getElementById("productimg");
+			var smallimg=document.getElementsByClassName("small-img");
+			
+			smallimg[0].onclick=function()
+			{
+				productimg.src=smallimg[0].src;
+			}
+			smallimg[1].onclick=function()
+			{
+				productimg.src=smallimg[1].src;
+			}
+			smallimg[2].onclick=function()
+			{
+				productimg.src=smallimg[2].src;
+			}
+			smallimg[3].onclick=function()
+			{
+				productimg.src=smallimg[3].src;
+			}
+		</script>
+		
+	</body>
+</html>
